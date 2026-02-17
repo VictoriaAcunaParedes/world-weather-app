@@ -1,0 +1,68 @@
+[
+    {
+        "id": 1,
+        "city": "Santiago",
+        "country": "Chile",
+        "temperature": 28,
+        "feels_like": 30,
+        "humidity": 40,
+        "wind_speed": 12,
+        "description": "Soleado",
+        "icon": "sun"
+    },
+    {
+        "id": 2,
+        "city": "Buenos Aires",
+        "country": "Argentina",
+        "temperature": 24,
+        "feels_like": 25,
+        "humidity": 65,
+        "wind_speed": 18,
+        "description": "Parcialmente nublado",
+        "icon": "cloud"
+    },
+    {
+        "id": 3,
+        "city": "Lima",
+        "country": "Perú",
+        "temperature": 20,
+        "feels_like": 20,
+        "humidity": 80,
+        "wind_speed": 10,
+        "description": "Nublado",
+        "icon": "cloud"
+    },
+    {
+        "id": 4,
+        "city": "Bogotá",
+        "country": "Colombia",
+        "temperature": 17,
+        "feels_like": 16,
+        "humidity": 85,
+        "wind_speed": 14,
+        "description": "Lluvia ligera",
+        "icon": "rain"
+    },
+    {
+        "id": 5,
+        "city": "Madrid",
+        "country": "España",
+        "temperature": 31,
+        "feels_like": 33,
+        "humidity": 35,
+        "wind_speed": 9,
+        "description": "Despejado",
+        "icon": "sun"
+    },
+    {
+        "id": 6,
+        "city": "Nueva York",
+        "country": "Estados Unidos",
+        "temperature": 14,
+        "feels_like": 12,
+        "humidity": 55,
+        "wind_speed": 22,
+        "description": "Ventoso",
+        "icon": "wind"
+    }
+]
