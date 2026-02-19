@@ -2,22 +2,34 @@
     <nav class="navbar navbar-expand-lg custom-navbar">
         <div class="container">
             <a class="navbar-brand fw-bold" href="#">W W App</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link active-link" href="#">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Ciudades</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
-                </ul>
+            <div class="ms-auto">
+                <!-- seleccion de ciudad (1)(2)(3)-->
+                <select name="" id="" class="form-select" v-model="selectedCity" @change="emitCity">
+                    <option  disabled value="">Selecciona una ciudad</option>
+                    <option v-for="city in cities" :key="city.name" :value="city">{{ city.name }}</option>
+                </select>
             </div>
         </div>
     </nav>
 </template>
 
+<!-- FLUJO
+1.selecciono ciudad
+2.v-model actualiza selectedCity
+3.se ejecuta emitCity
+4.evento citySelected
+5.appvue recibe ciudad, llama a la api, le pasa los datos a appcard, se muestra la tarjeta -->
 <script setup>
+import { ref } from 'vue'
+import { cities } from '@/data/cities';
+
+const selectedCity = ref("") //(2)
+const emit = defineEmits(["citySelected"])
+
+function emitCity() { //(3)
+    emit("citySelected", selectedCity.value) //(4)
+}
+
 </script>
 
 
@@ -32,20 +44,17 @@
 }
 
 .navbar-brand:hover {
-    color: #f8f9fa;
+    color: #dadcdf;
 }
 
-.nav-link {
-    color: white;
-    transition: opacity 0.2s ease;
-}
+.form-select {
+    transition: all 0.3s ease;
+    }
 
-.nav-link:hover {
-    opacity: 0.7;
-}
+.form-select:focus {
+    box-shadow: 0 0 0 3px rgba(255,255,255,0.35);
+    border-color: white;
+    outline: none;
+    }
 
-.active-link {
-    font-weight: bold;
-    border-bottom: 2px solid white;
-}
 </style>

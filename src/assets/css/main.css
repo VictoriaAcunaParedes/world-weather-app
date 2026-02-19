@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body, #app {
+    height: 100%;
+    background-color: #0b5ed7;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+h5, h4, h2, h6, h1, .navbar-brand {
+    font-family: 'Montserrat', sans-serif;
+}
+
+p, small, .text-muted {
+    font-family: 'Lato', sans-serif;
+}
+
+select, .form-select {
+    font-family: 'Roboto', sans-serif;
+}
